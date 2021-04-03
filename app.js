@@ -41,7 +41,7 @@ const app = {
         },
 
         inCart(product) {
-            return this.cart.indexOf(product) != 1
+            return this.cart.indexOf(product) != -1
         },
 
         removeCart(product) {
