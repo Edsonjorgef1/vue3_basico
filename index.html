@@ -23,18 +23,11 @@
                     <p> {{product.title}}</p>
                     <img :src="product.image" :alt="product.title" style="max-width: 500px; max-height: 500px;">
                     <p> <strong v-if="product.stars > 0"> {{ product.stars }}&#9734; </strong> {{product.description}}</p>
-                    <a
-                            href="#"
-                            @click.prevent="addCart(product)"
-                            v-if="!inCart(product)">
+                    <button
+                        @click.prevent="addCart(product)"
+                        :disabled="inCart(product)">
                         ADD CART
-                    </a>
-                    <a
-                            href="#"
-                            @click.prevent="removeCart(product)"
-                            v-else>
-                        REMOVE CART
-                    </a>
+                    </button>
                 </li>
             </ul>
 
