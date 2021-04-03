@@ -46,6 +46,12 @@ const app = {
             this.cart = this.cart.filter((prod, index) => product != prod );
 
         },
+    },
+
+    computed: {
+        fullName () {
+            return this.name + ' ' + this.lastName
+        }
     }
 }
 
