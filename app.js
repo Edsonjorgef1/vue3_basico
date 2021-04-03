@@ -1,12 +1,12 @@
 
 const app = {
-    data(){
+    data() {
         return {
             title: 'Curso basico de Vue 3',
             name: 'Edson',
             lastName: 'Francisco',
             products: [
-                 {
+                {
                     title: 'Filme 01',
                     description: 'Filme muito interessante',
                     image: './assets/img/img3.jpg',
@@ -30,14 +30,23 @@ const app = {
     },
 
     methods: {
-        addCart (product) {
-            this.cart.push(product)
+        addCart(product) {
+            this.title = 'Changed'
+            // this.cart.push(product)
         },
 
-        inCart (product) {
+        inCart(product) {
             return this.cart.indexOf(product) != 1
-        }
-    },
+        },
+
+        removeCart(product) {
+            // this.cart = this.cart.filter((prod, index) => {
+            //     return product != prod
+            // })
+            this.cart = this.cart.filter((prod, index) => product != prod );
+
+        },
+    }
 }
 
 Vue.createApp(app).mount('#app')
