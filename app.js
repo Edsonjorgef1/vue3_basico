@@ -2,6 +2,7 @@
 const app = {
     data(){
         return {
+            title: 'Curso basico de Vue 3',
             name: 'Edson',
             lastName: 'Francisco',
             products: [
@@ -24,9 +25,19 @@ const app = {
                     stars: 2,
                 }
             ],
+            cart: [],
         }
-    }
+    },
 
+    methods: {
+        addCart (product) {
+            this.cart.push(product)
+        },
+
+        inCart (product) {
+            return this.cart.indexOf(product) != 1
+        }
+    },
 }
 
 Vue.createApp(app).mount('#app')
