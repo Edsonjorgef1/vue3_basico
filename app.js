@@ -26,6 +26,10 @@ const app = {
                 }
             ],
             cart: [],
+            styles: {
+                backgroundColor: '#000',
+                color: '#fff',
+            }
         }
     },
 
