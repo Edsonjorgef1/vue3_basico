@@ -21,14 +21,15 @@
                 <p> <strong v-if="product.stars > 0"> {{ product.stars }}&#9734; </strong> {{product.description}}</p>
                 <a
                    href="#"
-                   v-if="!inCart(product)"
                    @click.prevent="addCart(product)">
+<!--                   v-if="!inCart(product)"-->
                     ADD CART
                 </a>
+<br>
                 <a
                    href="#"
-                   @click.prevent="removeCart(product)"
-                   v-else>
+                   @click.prevent="removeCart(product)">
+<!--                   v-else>-->
                     REMOVE CART
                 </a>
             </li>
