@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/styles.css">
+
     <title>Curso de Vue 3</title>
 </head>
 <body>
@@ -25,7 +27,8 @@
                     <p> <strong v-if="product.stars > 0"> {{ product.stars }}&#9734; </strong> {{product.description}}</p>
                     <button
                         @click.prevent="addCart(product)"
-                        :disabled="inCart(product)">
+                        :disabled="inCart(product)"
+                        :class="[inCart(product) ? 'button-disabled' : 'teste']">
                         ADD CART
                     </button>
                 </li>
