@@ -8,6 +8,9 @@
 <body>
     <div id="app">
         <div :style="styles">
+            <label for="themeBlack">
+                <input type="checkbox" :checked="themeBlack" @click="toogleTheme()" name="themeBlack" id="themeBlack"> Tema Escuro
+            </label>
             <h1> {{ title }}</h1>
             <p> {{ fullName }}</p>
 

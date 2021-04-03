@@ -29,7 +29,8 @@ const app = {
             styles: {
                 backgroundColor: '#000',
                 color: '#fff',
-            }
+            },
+            themeBlack: true
         }
     },
 
@@ -50,6 +51,18 @@ const app = {
             this.cart = this.cart.filter((prod, index) => product != prod );
 
         },
+
+        toogleTheme () {
+            this.themeBlack = ! !this.themeBlack
+
+            if(this.themeBlack){
+                this.styles.backgroundColor = '#000'
+                this.styles.color = '#fff'
+            } else {
+                this.styles.backgroundColor = '#fff'
+                this.styles.color = '#000'
+            }
+        }
     },
 
     computed: {
