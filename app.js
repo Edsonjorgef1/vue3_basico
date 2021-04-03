@@ -31,8 +31,8 @@ const app = {
 
     methods: {
         addCart(product) {
-            this.title = 'Changed'
-            // this.cart.push(product)
+            // this.title = 'Changed'
+            this.cart.push(product)
         },
 
         inCart(product) {
