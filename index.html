@@ -21,10 +21,12 @@
                 <p> <strong v-if="product.stars > 0"> {{ product.stars }}&#9734; </strong> {{product.description}}</p>
                 <a href="#"
                    v-if="!inCart(product)">
+<!--                    v-if="inCart(product)">-->
                     REMOVE CART
                 </a>
                 <a href="#"
-                   v-on:click="title = 'Vue 3'">
+                   v-on:click.prevent="addCart(product)"
+                   v-else>
                     ADD CART
                 </a>
             </li>
