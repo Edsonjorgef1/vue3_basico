@@ -28,7 +28,7 @@
                     <button
                         @click.prevent="addCart(product)"
                         :disabled="inCart(product)"
-                        :class="{'button-disabled' : inCart(product) }">
+                        :class="['color', {'button-disabled' : inCart(product) }]">
                         ADD CART
                     </button>
                 </li>
