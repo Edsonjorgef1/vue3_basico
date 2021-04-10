@@ -1,5 +1,5 @@
 
-const app = {
+const myApp = {
     data() {
         return {
             title: 'Curso basico de Vue 3',
@@ -72,4 +72,18 @@ const app = {
     }
 }
 
-Vue.createApp(app).mount('#app')
+// Objecto que vai retornar a informacao no componente
+const productDetail = {
+    template: ` <p> Sou um component {{example}} - Product Detail</p>`,
+
+    data(){
+        return {
+            example: 123,
+        }
+    }
+}
+
+const app = Vue.createApp(myApp)
+
+app.component('product-detail', productDetail)  // Registrando o componente
+app.mount('#app')
