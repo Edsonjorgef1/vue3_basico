@@ -10,15 +10,17 @@ const productDetail = {
                         ADD CART
                     </button>
     `,
+    emits: ['add-prod-cart'],
+
     // props: ['product', 'productInCart'],
     props: {
         product: {
             type: Object,
             required: true,
-            default: true,
+            // default: true,
         },
         productInCart: {
-            type: Object,
+            type: Boolean,
             required: true,
             // default: true,
         },
