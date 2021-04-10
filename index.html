@@ -27,7 +27,6 @@
                             :product-in-cart="inCart(cart)">
                     </product-detail>
 
-
                     <button
                         @click.prevent="removeCart(product)"
                         :class="['color', {'button-disabled' : !inCart(product) }]">
@@ -42,6 +41,10 @@
 
     <script src="https://unpkg.com/vue@next"></script>
     <script src="./app.js"></script>
+    <script src="./components/ProductDetail.js"></script>
+    <script>
+        app.mount('#app')
+    </script>
 
 </body>
 </html>
