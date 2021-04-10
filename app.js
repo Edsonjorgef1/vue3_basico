@@ -74,7 +74,11 @@ const myApp = {
 
 // Objecto que vai retornar a informacao no componente
 const productDetail = {
-    template: ` <p> Sou um component {{example}} - Product Detail</p>`,
+    template: ` <p> {{product.title}}</p>
+                    <img :src="product.image" :alt="product.title" style="max-width: 500px; max-height: 500px;">
+                    <p> <strong v-if="product.stars > 0"> {{ product.stars }}&#9734; </strong> {{product.description}}</p>
+    `,
+    props: ['product'],
 
     data(){
         return {

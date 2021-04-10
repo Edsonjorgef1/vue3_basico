@@ -22,9 +22,9 @@
 
             <ul>
                 <li v-for="(product,index) in products" :key="index">
-                    <p> {{product.title}}</p>
-                    <img :src="product.image" :alt="product.title" style="max-width: 500px; max-height: 500px;">
-                    <p> <strong v-if="product.stars > 0"> {{ product.stars }}&#9734; </strong> {{product.description}}</p>
+                    <product-detail
+                            :product="product">
+                    </product-detail>
                     <button
                             @click.prevent="addCart(product)"
                             :disabled="inCart(product)"
@@ -41,9 +41,6 @@
                 </li>
             </ul>
 
-            <product-detail></product-detail>
-            <product-detail></product-detail>
-            <product-detail></product-detail>
         </div>
     </div>
 
