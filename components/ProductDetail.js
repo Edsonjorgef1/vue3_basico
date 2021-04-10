@@ -10,7 +10,19 @@ const productDetail = {
                         ADD CART
                     </button>
     `,
-    props: ['product', 'productInCart'],
+    // props: ['product', 'productInCart'],
+    props: {
+        product: {
+            type: Object,
+            required: true,
+            default: true,
+        },
+        productInCart: {
+            type: Object,
+            required: true,
+            // default: true,
+        },
+    },
     methods: {
         addCart(product){
             console.log('Add cart in component')
