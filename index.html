@@ -23,14 +23,10 @@
             <ul>
                 <li v-for="(product,index) in products" :key="index">
                     <product-detail
-                            :product="product">
+                            :product="product"
+                            :product-in-cart="inCart(cart)">
                     </product-detail>
-                    <button
-                            @click.prevent="addCart(product)"
-                            :disabled="inCart(product)"
-                            :class="{'button-disabled' : inCart(product) }">
-                        ADD CART
-                    </button>
+
 
                     <button
                         @click.prevent="removeCart(product)"
