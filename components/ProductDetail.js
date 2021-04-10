@@ -26,6 +26,7 @@ const productDetail = {
     methods: {
         addCart(product){
             console.log('Add cart in component')
+            this.$emit('add-prod-cart', product)
         }
     },
 
